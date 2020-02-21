@@ -1,0 +1,18 @@
+
+<div class="container text-center">
+<div class="d-inline-flex m-3">
+  <h1 class="text-center" >List of Delicious Cocktails</h1>
+  <button class="btn btn-success btn-lg ml-5"><%= link_to "add cocktail", new_cocktail_path %></button>
+</div>
+  <div>
+    <ul class="list-group">
+      <%@cocktails.each do |cocktail| %>
+        <li class="list-group-item"> <%= cocktail.name %> </li>
+        <%= link_to "Cocktail Details", cocktail_path(cocktail)%>
+      <% end %>
+    </ul>
+  </div>
+
+</div>
+
+
